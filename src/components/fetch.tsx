@@ -33,7 +33,7 @@ const Fetch = () => {
 				},
 			);
 		})();
-	}, []);
+	}, [setPosts, posts]);
 
 	return <div key={posts?.id}>{posts && posts.time.toLocaleString()}</div>;
 };

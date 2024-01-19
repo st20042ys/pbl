@@ -30,8 +30,8 @@ const Home = () => {
 			<div className="relative h-96 w-96 border border-black">
 				<div className="w-full text-center text-6xl">TODOList</div>
 				<div className="text-3xl">
-					{State.map(({ name }) => (
-						<li>
+					{State.map(({ name }, index) => (
+						<li key={index}>
 							{name}
 							<button
 								onClick={() => {

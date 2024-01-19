@@ -9,7 +9,11 @@ type ResType = {
 };
 
 const Fetch2 = () => {
-	const [posts, setPosts] = useState<tinponism>();
+	const [posts, setPosts] = useState<tinponism>({
+		id: 1,
+		akarusa: 0,
+		time: new Date(),
+	});
 	var ti = 0;
 	useEffect(() => {
 		(async () => {
@@ -20,7 +24,7 @@ const Fetch2 = () => {
 		})();
 	}, []);
 
-	return <div>{posts?.akarusa < 3000 || undefined ? "aitenai" : "aiteiru"}</div>;
+	return <div>{posts?.akarusa < 3000 ? "aitenai" : "aiteiru"}</div>;
 };
 
 export default Fetch2;

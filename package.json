@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "next dev",
-		"build": "yarn migrate && yarn generate && yarn seed && next build",
+		"build": "yarn migrate && yarn generate && next build",
 		"start": "next start",
 		"lint": "next lint",
 		"migrate": "prisma migrate dev --name init",

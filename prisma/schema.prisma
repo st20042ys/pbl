@@ -11,7 +11,7 @@ datasource db {
 }
 
 model tinponism {
-  id        Int      @id@default(autoincrement())
-  akarusa   Int 
-  time DateTime @updatedAt
+  id      Int      @id
+  akarusa Int
+  time    DateTime @updatedAt
 }

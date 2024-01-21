@@ -10,6 +10,15 @@ const defaultData: Prisma.tinponismCreateInput = {
 
 async function main() {
 	console.log(`Start seeding ...`);
+	const duplicate = await prisma.tinponism.findUnique({
+		where: {
+			id: defaultData.id,
+		},
+	});
+	if (duplicate) {
+		console.log(`Already seeded.`);
+		return;
+	}
 	await prisma.tinponism.create({
 		data: defaultData,
 	});

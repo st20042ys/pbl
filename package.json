@@ -2,7 +2,6 @@
 	"name": "next-blog",
 	"version": "0.1.0",
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"dev": "next dev",
 		"build": "yarn migrate && yarn generate && next build",
@@ -36,6 +35,6 @@
 		"typescript": "^5.3.3"
 	},
 	"prisma": {
-		"seed": "ts-node --esm prisma/seed.ts"
+		"seed": "ts-node  --project ./tsconfig.tsnode.json  prisma/seed.ts"
 	}
 }

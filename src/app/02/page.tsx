@@ -1,11 +1,5 @@
-
 const Tintin = () => {
-    return (
-        <p>
-            oorui
-        </p>
-    )
-}
+	return <p>oorui</p>;
+};
 
-
-export default Tintin
+export default Tintin;

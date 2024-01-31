@@ -13,7 +13,7 @@ const Fetch = () => {
 	var ti = 0;
 	useEffect(() => {
 		(async () => {
-			const fetchData = await fetch("http://localhost:3000/api/1", { method: "GET" })
+			const fetchData = await fetch("https://pbl-f3vr.vercel.app/api", { method: "GET" })
 				.then<ResType>(res => res.json())
 				.then(d => d.data)
 				.catch(e => {

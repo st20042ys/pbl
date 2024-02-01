@@ -24,7 +24,7 @@ const Fetch2 = () => {
 		})();
 	}, []);
 
-	return <div>{posts?.akarusa < 3000 ? "aitenai" : "aiteiru"}</div>;
+	return <div>{posts?.akarusa < 3000 ? "１席空きあり" : "空き無し"}</div>;
 };
 
 export default Fetch2;

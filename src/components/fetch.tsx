@@ -13,18 +13,18 @@ const Fetch = () => {
 	var ti = 0;
 	useEffect(() => {
 		(async () => {
-			const fetchData = await fetch("https://pbl-f3vr.vercel.app/api", { method: "GET" })
+			const fetchData = await fetch(`${process.env["NEXT_PUBLIC_SITE_BASE_URL"]!}/api/1`, { method: "GET" })
 				.then<ResType>(res => res.json())
 				.then(d => d.data)
 				.catch(e => {
 					console.log(e);
 					throw e;
 				});
-			console.log(JSON.stringify(posts));
-			console.log(JSON.stringify(fetchData));
-			console.log(typeof fetchData.time);
+			//console.log(JSON.stringify(posts));
+			//console.log(JSON.stringify(fetchData));
+			//console.log(typeof fetchData.time);
 			const fetchDate = new Date(fetchData.time);
-			console.log(fetchDate);
+			//console.log(fetchDate);
 			fetchDate.setTime(fetchDate.getTime() + 30 * 60 * 1000);
 			setPosts(
 				fetchData && {
@@ -35,7 +35,7 @@ const Fetch = () => {
 		})();
 	}, [setPosts, posts]);
 
-	return <div key={posts?.id}>{posts && posts.time.toLocaleString()}</div>;
+	return <div>{posts && posts.akarusa < 3000 && posts.time.toLocaleString()}</div>;
 };
 
 export default Fetch;

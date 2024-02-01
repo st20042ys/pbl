@@ -17,7 +17,7 @@ const Fetch2 = () => {
 	var ti = 0;
 	useEffect(() => {
 		(async () => {
-			const fetchData = await fetch("https://pbl-f3vr.vercel.app/api", { method: "GET" })
+			const fetchData = await fetch(`${process.env["NEXT_PUBLIC_SITE_BASE_URL"]!}/api/1`, { method: "GET" })
 				.then<ResType>(res => res.json())
 				.then(d => d.data);
 			setPosts(fetchData);

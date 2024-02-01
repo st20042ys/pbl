@@ -8,7 +8,7 @@ async function seed() {
 		{
 			id: 1,
 			akarusa: 100,
-			time: date,
+			updatedAt: date,
 		},
 	];
 

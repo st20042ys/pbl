@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 const defaultData: Prisma.tinponismCreateInput = {
 	id: 1,
 	akarusa: 0,
-	time: new Date(),
+	updatedAt: new Date(),
 };
 
 async function main() {

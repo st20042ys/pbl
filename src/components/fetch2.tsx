@@ -12,7 +12,7 @@ const Fetch2 = () => {
 	const [posts, setPosts] = useState<tinponism>({
 		id: 1,
 		akarusa: 0,
-		time: new Date(),
+		updatedAt: new Date(),
 	});
 	var ti = 0;
 	useEffect(() => {

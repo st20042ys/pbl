@@ -23,19 +23,19 @@ const Fetch = () => {
 			//console.log(JSON.stringify(posts));
 			//console.log(JSON.stringify(fetchData));
 			//console.log(typeof fetchData.time);
-			const fetchDate = new Date(fetchData.time);
+			const fetchDate = new Date(fetchData.updatedAt);
 			//console.log(fetchDate);
 			fetchDate.setTime(fetchDate.getTime() + 30 * 60 * 1000);
 			setPosts(
 				fetchData && {
 					...fetchData,
-					time: fetchDate,
+					updatedAt: fetchDate,
 				},
 			);
 		})();
 	}, [setPosts, posts]);
 
-	return <div>{posts && posts.akarusa < 3000 && posts.time.toLocaleString()}</div>;
+	return <div>{posts && posts.akarusa < 3000 && posts.updatedAt.toLocaleString()}</div>;
 };
 
 export default Fetch;

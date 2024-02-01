@@ -13,5 +13,5 @@ datasource db {
 model tinponism {
   id      Int      @id
   akarusa Int
-  time    DateTime @updatedAt
+  updatedAt    DateTime @updatedAt
 }

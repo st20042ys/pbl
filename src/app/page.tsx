@@ -8,7 +8,7 @@ const Home = () => {
 	return (
 		<>
 			<div className="border-b-4">
-				<div className="text-7xl flex justify-center items-center">お風呂CHECK</div>
+				<div className="text-7xl flex justify-center items-center">お風呂空き状況CHECKシステム</div>
 			</div>
 			<div className="text-4xl">
 				今の空き状況は...
